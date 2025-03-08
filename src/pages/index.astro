@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    title: "AxentHost",
+    description: "Game server hosting platform introducing free & disposable servers.",
+    image: "/axenthost.png",
+    url: "https://axenthost.com",
+    tags: ["Vue.js", "Typescript", "Axentix"]
+  },
+  {
+    title: "Axentix",
+    description: "The framework mixing fully customizable components & utility-first classes, leaving the design choice to the developer.",
+    image: "/axentix.png",
+    url: "https://useaxentix.com",
+    tags: ["Javascript", "SCSS", "Axentix"]
+  },
+  {
+    title: "AxentSoftware",
+    description: "Our Software Development company. Our goal is to make Make Software Ideas Real.",
+    image: "/axentsoftware.png",
+    url: "https://axentsoftware.com",
+    tags: ["React", "Typescript", "TailwindCSS"]
+  }
+];
+---
+
+<Layout title="DevName - Software Developer">
+  <div class="max-w-7xl mx-auto px-4">
+    <section class="py-20 text-center">
+      <h1 class="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">
+        Vincent LEVEQUE
+      </h1>
+      <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+        Building elegant solutions to complex problems. Passionate about web technologies and open source.
+      </p>
+      <div class="flex gap-4 justify-center">
+        <a
+          href="/blog"
+          class="px-6 py-3 bg-blue-500/10 hover:bg-blue-500/20 rounded-lg font-medium transition-all border border-blue-500/20 hover:border-blue-500/40 backdrop-blur-sm"
+        >
+          Read My Blog
+        </a>
+        <a
+          href="https://github.com/stallos11"
+          class="px-6 py-3 bg-[#1a2333]/50 hover:bg-[#1a2333]/70 rounded-lg font-medium transition-all border border-[#1a2333] backdrop-blur-sm"
+        >
+          GitHub Profile
+        </a>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <h2 class="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-blue-300 to-blue-500 text-transparent bg-clip-text">
+        Featured Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map(project => (
+          <a href={project.url} class="group bg-[#0a192f]/30 rounded-2xl overflow-hidden border border-[#1a2333] backdrop-blur-sm hover:border-blue-500/30 transition-all hover:translate-y-[-2px]">
+            <div class="aspect-[16/9] overflow-hidden">
+              <img 
+                src={project.image} 
+                alt={`${project.title} Preview`}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-3 bg-gradient-to-r from-blue-300 to-blue-400 text-transparent bg-clip-text">
+                {project.title}
+              </h3>
+              <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                {project.description}
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {project.tags.map(tag => (
+                  <span class="px-3 py-1 bg-blue-500/5 rounded-full text-xs text-blue-300 border border-blue-500/10">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>
