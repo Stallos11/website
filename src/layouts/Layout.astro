@@ -4,19 +4,19 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Software Developer Portfolio" } = Astro.props;
+const { title, description = 'Software Developer Portfolio' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang='en' class='dark'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel="icon" type="image/png" href="vleveque.png" />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='description' content={description} />
     <title>{title}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' rel='stylesheet' />
     <style>
       @keyframes gradient {
         0% {
@@ -39,9 +39,8 @@ const { title, description = "Software Developer Portfolio" } = Astro.props;
         left: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle at center, transparent, #000),
-                    radial-gradient(circle at 30% 30%, #0a192f 0%, transparent 40%),
-                    radial-gradient(circle at 70% 70%, #0f2847 0%, transparent 40%);
+        background: radial-gradient(circle at center, transparent, #000), radial-gradient(circle at 30% 30%, #0a192f 0%, transparent 40%),
+          radial-gradient(circle at 70% 70%, #0f2847 0%, transparent 40%);
         z-index: -1;
         animation: gradient 20s ease infinite;
         pointer-events: none;
@@ -49,19 +48,44 @@ const { title, description = "Software Developer Portfolio" } = Astro.props;
     </style>
   </head>
   <body class="bg-[#000] text-gray-100 min-h-screen font-['Inter'] animated-bg overflow-x-hidden">
-    <nav class="fixed w-full bg-black/30 backdrop-blur-2xl border-b border-[#1a2333]/20 z-50">
-      <div class="max-w-7xl mx-auto px-4 py-3">
-        <div class="flex justify-between items-center">
-          <a href="/" class="text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-200 text-transparent bg-clip-text">DevName</a>
-          <div class="space-x-6">
-            <a href="/" class="hover:text-blue-400 transition-colors">Home</a>
-            <a href="/blog" class="hover:text-blue-400 transition-colors">Blog</a>
+    <nav class='fixed w-full bg-black/30 backdrop-blur-2xl border-b border-[#1a2333]/20 z-50'>
+      <div class='max-w-7xl mx-auto px-4 py-3'>
+        <div class='flex justify-between items-center'>
+          <a href='/' class='text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-200 text-transparent bg-clip-text'>VLeveque</a>
+          <div class='space-x-6'>
+            <a href='/' class='hover:text-blue-400 transition-colors'>Home</a>
+            <a href='/blog' class='hover:text-blue-400 transition-colors'>Blog</a>
           </div>
         </div>
       </div>
     </nav>
-    <main class="pt-16 relative">
+    <main class='pt-16 relative'>
       <slot />
     </main>
+    <footer class='bg-white rounded-lg shadow-sm dark:bg-gray-900'>
+      <div class='w-full max-w-screen-xl mx-auto p-4 md:py-8'>
+        <div class='sm:flex sm:items-center sm:justify-between'>
+          <div class='flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse'>
+            <img src='/vleveque.png' class='h-8' alt='VLeveque Logo' />
+            <span class='self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>VLeveque</span>
+          </div>
+          <ul class='flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400'>
+            <li>
+              <a href='/blog' class='hover:underline me-4 md:me-6'>Blog</a>
+            </li>
+            <li>
+              <a href='https://keybase.io/stallos' target='_blank' class='hover:underline me-4 md:me-6'>Keybase</a>
+            </li>
+            <li>
+              <a href='https://hub.docker.com/u/stallos11' target='_blank' class='hover:underline me-4 md:me-6'>Docker Hub</a>
+            </li>
+          </ul>
+        </div>
+        <hr class='my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8' />
+        <span class='block text-sm text-gray-500 sm:text-center dark:text-gray-400'
+          >© 2025 <a href='https://flowbite.com/' class='hover:underline'>VLeveque</a>. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
   </body>
 </html>
