@@ -1,0 +1,98 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+const palworldUrl = 'https://axenthost.com/games/palworld-server-hosting/';
+const proUrl =  'https://pro.axenthost.com/login';
+---
+
+<BlogPost
+  title="We shipped Palworld hosting on AxentHost"
+  publishDate="June 05, 2026"
+  description="A quick note on AxentHost diamonds, free credits, and the Palworld servers we just launched."
+>
+  <p class="lead text-xl text-gray-200 font-medium !mt-0">
+    Two ways to play on AxentHost: free hourly credits for quick spins, or
+    <strong class="text-blue-300">diamonds</strong> when you need a server that stays up.
+    We just shipped <a href={palworldUrl}>Palworld hosting</a>, and for that game diamonds are the whole point.
+  </p>
+
+  <div class="not-prose my-10 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-transparent p-6">
+    <p class="text-sm font-semibold uppercase tracking-wider text-blue-400 mb-2">TL;DR</p>
+    <p class="text-gray-200 leading-relaxed m-0">
+      Diamonds are monthly premium packs. Credits are for trying things out.
+      Palworld needs a world that runs 24/7. Pick a diamond pack, activate, play.
+    </p>
+  </div>
+
+  <h2>Diamonds, in one sentence</h2>
+  <p>
+    They're our premium currency. Pick RAM, disk, extras. See the monthly price, hit activate.
+    Scale up from the panel when your crew grows. Downgrade mid-month and you get diamonds back, pro-rata.
+  </p>
+
+  <div class="not-prose grid sm:grid-cols-2 gap-4 my-10">
+    <div class="rounded-xl border border-[#1a2333] bg-[#0a192f]/40 p-5">
+      <span class="text-2xl" aria-hidden="true">⏱️</span>
+      <h3 class="text-lg font-semibold text-gray-100 mt-3 mb-2">Hourly credits</h3>
+      <ul class="space-y-2 text-sm text-gray-400 m-0 list-disc pl-5">
+        <li>Minecraft on a budget</li>
+        <li>Weekend sessions with friends</li>
+        <li>Throwaway worlds</li>
+      </ul>
+    </div>
+    <div class="rounded-xl border border-blue-500/30 bg-blue-500/5 p-5 ring-1 ring-blue-500/10">
+      <span class="text-2xl" aria-hidden="true">💎</span>
+      <h3 class="text-lg font-semibold text-blue-200 mt-3 mb-2">Diamonds</h3>
+      <ul class="space-y-2 text-sm text-gray-300 m-0 list-disc pl-5">
+        <li>24/7 uptime</li>
+        <li>Ryzen, NVMe, backups</li>
+        <li>Full control panel</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="text-center text-gray-400 italic border-l-2 border-blue-500/40 pl-4 my-8">
+    Palworld is the second camp. Your factory doesn't pause because the host went to bed.
+  </p>
+
+  <h2>Palworld is live</h2>
+  <p>
+    Dedicated servers from <strong class="text-white">14.99€/month</strong>.
+    Pick Palworld, grab the recommended diamond pack, activate. You're in within seconds.
+  </p>
+
+  <ul class="not-prose grid sm:grid-cols-2 gap-3 my-8 list-none p-0">
+    <li class="flex items-start gap-3 rounded-lg bg-[#0a192f]/50 border border-[#1a2333] px-4 py-3 text-gray-300 text-sm">
+      <span class="text-blue-400 shrink-0">✓</span> Web console and file manager
+    </li>
+    <li class="flex items-start gap-3 rounded-lg bg-[#0a192f]/50 border border-[#1a2333] px-4 py-3 text-gray-300 text-sm">
+      <span class="text-blue-400 shrink-0">✓</span> Daily automatic backups
+    </li>
+    <li class="flex items-start gap-3 rounded-lg bg-[#0a192f]/50 border border-[#1a2333] px-4 py-3 text-gray-300 text-sm">
+      <span class="text-blue-400 shrink-0">✓</span> Mods where it makes sense
+    </li>
+    <li class="flex items-start gap-3 rounded-lg bg-[#0a192f]/50 border border-[#1a2333] px-4 py-3 text-gray-300 text-sm">
+      <span class="text-blue-400 shrink-0">✓</span> Scale RAM when lag hits
+    </li>
+  </ul>
+
+  <div class="not-prose my-10 text-center">
+    <a
+      href={palworldUrl}
+      class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 border border-blue-400/30 shadow-lg shadow-blue-500/20 transition-all hover:translate-y-[-1px]"
+    >
+      Launch Palworld hosting
+    </a>
+    <p class="text-sm text-gray-500 mt-3 mb-0">No setup fees. Upgrade anytime.</p>
+  </div>
+
+  <h2>Why we built it this way</h2>
+  <p>
+    Palworld players don't want session hosts. They want one save, one base, friends dropping in whenever.
+    We sized the default diamond pack for stable co-op and made upgrades painless. That was a product call as much as an infra one.
+  </p>
+  <p>
+    Outgrowing free credits or tired of peer-to-peer? One world, always on.
+    <a href={proUrl}>Spin up a server</a> and tell us what you'd ship next.
+  </p>
+</BlogPost>

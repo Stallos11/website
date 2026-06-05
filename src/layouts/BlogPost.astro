@@ -28,7 +28,7 @@ const headings = await Astro.slots.render('default').then(content => {
         <h1 class="text-5xl font-bold mb-2 bg-gradient-to-r from-blue-300 to-blue-500 text-transparent bg-clip-text">{title}</h1>
         <time class="text-gray-400">{publishDate}</time>
       </div>
-      <div class="prose prose-invert max-w-none prose-headings:scroll-mt-20 prose-h2:text-3xl prose-h2:font-bold prose-h2:mb-6 prose-h2:mt-12 prose-h2:bg-gradient-to-r prose-h2:from-blue-300 prose-h2:to-blue-500 prose-h2:text-transparent prose-h2:bg-clip-text prose-h3:text-2xl prose-h3:font-semibold prose-h3:mb-4 prose-h3:mt-8 prose-h3:text-blue-300 prose-p:text-gray-300 prose-p:leading-relaxed prose-li:text-gray-300 prose-li:leading-relaxed">
+      <div class="article-body prose prose-invert prose-lg max-w-none prose-headings:scroll-mt-24">
         <slot />
       </div>
     </div>

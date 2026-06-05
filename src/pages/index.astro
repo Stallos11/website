@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 const projects = [
   {
     title: "AxentHost",
-    description: "Game server hosting platform introducing free & disposable servers.",
+    description: 'Game server hosting platform introducing free & disposable servers.',
     image: "/axenthost.png",
     url: "https://axenthost.com",
     tags: ["Vue.js", "Typescript", "Axentix"]
@@ -82,6 +82,9 @@ const projects = [
                 {project.description} 
                 {project.title == "Axentix" ? `Find out why it's the best` : ""} 
                 {project.title == "Axentix" && <><a class="bg-gradient-to-r from-blue-300 to-blue-400 text-transparent bg-clip-text" href="https://useaxentix.com/blog/axentix/tailwind-css-framework-alternative-with-utility-classes-based-components/">alternative to Tailwind css</a>.</>}
+
+                {project.title == "AxentHost" && <><br/>What's included :<br/></>} 
+                {project.title == "AxentHost" && <ul><li>- <a class="bg-gradient-to-r from-blue-300 to-blue-400 text-transparent bg-clip-text" href="https://axenthost.com/games/minecraft/">Free minecraft servers</a></li><li>- <a class="bg-gradient-to-r from-blue-300 to-blue-400 text-transparent bg-clip-text" href="https://axenthost.com/games/palworld-server-hosting/">Palworld hosting</a></li><br/></ul>}
               </p>
               <div class="flex flex-wrap gap-2">
                 {project.tags.map(tag => (
